@@ -11,3 +11,86 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 6vw !important;
+  }
+}
+
+fieldset {
+  border: 1px solid #ddd !important;
+  margin: 0;
+  padding: 10px !important;
+  position: relative;
+  border-radius: 4px;
+  background-color: #ddf092;
+  padding-left: 10px !important;
+}
+
+legend {
+  font-size: 12px;
+  margin-bottom: 0px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+
+/* CSS for home page */
+.home {
+  background: url("https://preview.colorlib.com/theme/edumark/img/banner/banner.png.webp");
+  max-height: 85vh;
+  height: 100vh;
+}
+
+.home-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.home-img-wrapper img {
+  width: 70%;
+}
+
+.home-heading-wrapper h1 {
+  color: #ffffff;
+  text-transform: capitalize;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+.boxed_btn {
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  padding: 17px 30px;
+  background: #04D2C8;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  display: inline-block;
+}
+
+@media screen and (max-width: 575px) {
+  .home-wrapper {
+    flex-direction: column;
+  }
+
+  .home-img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .boxed_btn {
+    font-size: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+
+  }
+}

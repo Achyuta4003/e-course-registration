@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Home from './components/Home'
+import Navigationbar from './components/Navigationbar'
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
+import RegisterPage from './components/RegisterPage/RegisterPage'
+import RegistrationDetailsPage from './components/RegistrationDetailsPage'
+import RegistrationData from './components/RegistrationData'
+import Footer from './components/Footer'
+import { ToastContainer } from 'react-toastify';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter >
+      <Navigationbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/*' element={<Navigate to="/" />} />
+        <Route path='/register' element={<RegisterPage />} />
+        <Route path='/registration-data' element={<RegistrationData />} />
+        <Route path='/registration-details/:id' element={<RegistrationDetailsPage />} />
+      </Routes>
+      <Footer />
+      <ToastContainer />
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
